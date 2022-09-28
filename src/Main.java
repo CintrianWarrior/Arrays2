@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        int [] monthlyExpenses = generateRandomArray();
+        int [] dailyExpenses = generateRandomArray();
         int total = 0;
-        for (int i = 0; i < monthlyExpenses.length; i++) {
-            total = total + monthlyExpenses[i];
+        for (int i = 0; i < dailyExpenses.length; i++) {
+            total = total + dailyExpenses[i];
         }
         System.out.println("Сумма трат за месяц составила " + total + " рублей.");
         }
