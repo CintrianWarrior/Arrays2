@@ -1,12 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        int [] monthlyExpenses = generateRandomArray();
-        int total = 0;
-        for (int i = 0; i < monthlyExpenses.length; i++) {
-            total = total + monthlyExpenses[i];
+        int [] dailyExpenses = generateRandomArray();
+        int maxDailyExpenses = -1;
+        int minDailyExpenses = 200_001;
+        for (int i = 0; i < dailyExpenses.length; i++) {
+            System.out.println(dailyExpenses[i]);
+            if (dailyExpenses[i] > maxDailyExpenses) {
+                maxDailyExpenses = dailyExpenses[i];
+            }
+            if (dailyExpenses[i] < minDailyExpenses) {
+                minDailyExpenses = dailyExpenses[i];
+            }
         }
-        System.out.println("Сумма трат за месяц составила " + total + " рублей.");
-        }
+        System.out.println("Минимальная сумма трат за день составила " + minDailyExpenses + " рублей. Максимальная сумма трат за день составила " + maxDailyExpenses + " рублей.");
+    }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
