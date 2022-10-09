@@ -5,8 +5,9 @@ public class Main {
         for (int i = 0; i < dailyExpenses.length; i++) {
             total = total + dailyExpenses[i];
         }
-        double averageDailyExpenses = (total / dailyExpenses.length);
-        System.out.println("Средняя сумма трат за месяц составила " + averageDailyExpenses + " рублей.");
+        int averageDailyExpenses = total / dailyExpenses.length;
+        int averageDailyExpenses2 = total%dailyExpenses.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageDailyExpenses + "," +averageDailyExpenses2 + " рублей.");
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
